@@ -1,11 +1,9 @@
 # kikoflo
 Outils utiles pour commencer un nouveau projet web avec Grunt (Node.js) :
-* Sass : https://github.com/gruntjs/grunt-contrib-sass
+* Compilation Sass : https://github.com/gruntjs/grunt-contrib-sass
 * Auto prefixer : https://github.com/postcss/autoprefixer
 * Minifier d'images : https://github.com/gruntjs/grunt-contrib-imagemin
 * Auto compilation : https://github.com/gruntjs/grunt-contrib-watch
-
-
 
 
 ## Installation
@@ -13,8 +11,6 @@ Outils utiles pour commencer un nouveau projet web avec Grunt (Node.js) :
     nodevars
     grunt
     
-    
-
 
 Pour vérifier si les node_modules sont à jour :
 
@@ -23,6 +19,11 @@ Pour vérifier si les node_modules sont à jour :
 > https://www.npmjs.com/package/npm-check/
 
 
+## @include Sass
+* Compass : http://compass-style.org/
+* normalize-scss : https://github.com/JohnAlbin/normalize-scss
+* breakpoint : https://github.com/lolmaus/breakpoint-slicer
+* _[option]_ toolkit : https://github.com/at-import/toolkit
 
 
 ## A faire
