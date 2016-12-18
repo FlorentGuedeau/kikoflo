@@ -12,11 +12,9 @@ Outils utiles pour commencer un nouveau projet web avec Grunt (Node.js) :
     grunt
     
 
-Pour vérifier si les node_modules sont à jour :
+Pour vérifier si les node_modules sont à jour : https://www.npmjs.com/package/npm-check/
 
     npm-check -u
-    
-> https://www.npmjs.com/package/npm-check/
 
 
 ## @include Sass
