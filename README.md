@@ -5,5 +5,12 @@ Outils utiles pour commencer un nouveau projet web avec Grunt (Node.js) :
 * Minifier d'images : https://github.com/gruntjs/grunt-contrib-imagemin
 * Auto compilation : https://github.com/gruntjs/grunt-contrib-watch
 
-Pour vérifier si les node_modules sont à jour : https://www.npmjs.com/package/npm-check
+## Installation
+    npm install
+    nodevars
+    grunt
+
+Pour vérifier si les node_modules sont à jour :
     npm-check -u
+    
+> https://www.npmjs.com/package/npm-check/
