@@ -7,7 +7,7 @@ Outils utiles pour commencer un nouveau projet web avec Grunt (Node.js) :
 
 
 ## Installation
-Utiliser le fichier batch `kikogo.bat` ou directement les lignes de commande :
+Utiliser le fichier batch `kikogo.bat` ou directement les lignes de commande :  
     npm install      
     nodevars 
     grunt
