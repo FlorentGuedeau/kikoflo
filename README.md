@@ -7,12 +7,8 @@ Outils utiles pour commencer un nouveau projet web avec Grunt (Node.js) :
 
 
 ## Installation
-    npm install
-    
-    
-    nodevars
-    
-    
+    npm install      
+    nodevars 
     grunt
     
 
