@@ -6,13 +6,8 @@ Outils utiles pour commencer un nouveau projet web avec Grunt (Node.js) :
 * Auto compilation : https://github.com/gruntjs/grunt-contrib-watch
 
 ## Installation
-Intaller les différents modules :
     npm install
-    
-Initialiser l'environnement de travail avec Node.js :
     nodevars
-    
-Lancer la compilation et le watch :
     grunt
     
     
