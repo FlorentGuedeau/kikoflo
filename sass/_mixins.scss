@@ -1,0 +1,84 @@
+// modernizr class and Sass content inject for fallback code
+@mixin no-svg {
+    html.no-svg & {
+        @content;
+    }
+}
+
+@mixin svg-background($svg, $img: null, $width: null, $height: null) {
+    $img: if($img == null, $svg, $img);
+    $width: if($width == null, image-width("#{$img}.png"), $width);
+    $height: if($height == null, image-height("#{$img}.png"), $height);
+    @include hide-text;
+
+    @include background-size(contain);
+    background: {
+        image: inline-image("svgs/#{$svg}.svg");
+        // size: $width $height;
+        repeat: no-repeat;
+        position: center center;
+    }
+    width: $width;
+    height: $height;
+
+    @include no-svg {
+        // @include icons-sprite($img);
+        background: {
+            image: image-url("#{$img}.png");
+            size: auto auto;
+        }
+    }
+}
+
+@mixin svg-content($img) {
+    @include content(inline-image('icons/' + $img + '.svg'));
+    width: icons-sprite-width($img);
+    // height: icons-sprite-height($img);
+    @include no-svg { @include content(image-url('icons/' + $img + '.png')); }
+}
+
+
+/* transforme des px en em */
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+    @return #{$pixels/$context}em;
+}
+
+
+@mixin center($width: null, $height: null) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    @if not $width and not $height {
+        //transform: translate(-50%, -50%);
+        @include translate(-50%, -50%);
+    } @else if $width and $height {
+        width: $width;
+        height: $height;
+        margin: -($width / 2) #{0 0} -($height / 2);
+} @else if not $height {
+    width: $width;
+    margin-left: -($width / 2);
+    //transform: translateY(-50%);
+    @include translate(0, -50%)
+        } @else {
+            height: $height;
+            margin-top: -($height / 2);
+            //transform: translateX(-50%);
+            @include translate(-50%, 0)
+                }
+}
+
+@mixin odd {
+    &.odd, &:nth-child(2n+1) {
+        @content;
+    }
+}
+
+@mixin even {
+    &.even, &:nth-child(2n) {
+        @content;
+    }
+}

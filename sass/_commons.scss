@@ -1,0 +1,126 @@
+/* CLASSES DE BASE */
+a, li, i, input, textarea, button {
+    @include transition-duration(400ms);
+}
+
+a:active, li:active, i:active, input:active, button:active {
+    @include transition-duration(0ms);
+}
+
+.float-left, .alignleft {
+    @include float-left;
+}
+
+.float-right, .alignright {
+    @include float-right;
+}
+
+.aligncenter {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+.wp-caption {
+    max-width: 100%;
+}
+
+.wp-caption-text {
+    max-width: 100%;
+}
+
+.sticky {
+    max-width: 100%;
+}
+
+.screen-reader-text {
+    max-width: 100%;
+}
+
+.gallery-caption {
+    max-width: 100%;
+}
+
+.bypostauthor {
+    max-width: 100%;
+}
+
+.reset-float {
+    @include reset-float;
+}
+
+.clear {
+    @include clearfix;
+
+    visibility: hidden;
+    overflow: hidden;
+    height: 0;
+    width:0;
+    clear: both;
+
+    *height:auto;
+    *width:auto;
+    *overflow: visible;
+    *zoom: normal;
+}
+
+.visuallyhidden {
+    @include squish-text();
+}
+
+.states {
+    @include border-radius(3px);
+    text: {
+        align: center;
+    }
+    margin: 1em 0;
+    padding: 1em .5em;
+    font: {
+        size: 1em;
+    }
+    line-height: #{$golden-ratio}em;
+    display: none;
+
+    &.info {
+        color: #787878;
+        border:solid 1px #d9d9d9;
+        background: {
+            color: #f9f9f9;
+        }
+        display: block;
+    }
+
+    &.warning, &.alert, &.failure, &.wpcf7-validation-errors {
+        color: #ffa800;
+        border: solid 1px #ffdd9a;
+        background-color: #fefbe9;
+        display: block;
+    }
+
+    &.success, &.notice, &.wpcf7-mail-sent-ok {
+        color: #468847;
+        border: solid 1px #d6e9c6;
+        background-color: #dff0d8;
+        display: block;
+    }
+
+    &.error {
+        color: #e64545;
+        border: solid 1px #fcbcbc;
+        background-color: #fddede;
+        display: block;
+    }
+
+    &.highlight {
+        color: #3a87ad;
+        border: solid 1px #bee1f3;
+        background-color: #d9edf7;
+        display: block;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

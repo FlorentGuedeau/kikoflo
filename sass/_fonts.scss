@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'latoregular';
+    src: url('fonts/lato-regular-webfont.woff2') format('woff2'),
+         url('fonts/lato-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$family-default: Helvetica, Arial, sans-serif;
+$family-lato: 'latoregular', Arial, sans-serif;

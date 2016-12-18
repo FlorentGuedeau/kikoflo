@@ -1,0 +1,83 @@
+main {
+    h1 {
+        a {
+
+        }
+    }
+
+    h2 {
+        a {
+
+        }
+    }
+
+    h3 {
+        a {
+
+        }
+    }
+
+    h4 {
+        a {
+
+        }
+    }
+
+    p, li {
+        line-height: #{$golden-ratio}em;
+    }
+
+    a {
+        // @include link-colors($color-blue, $color-orange, $color-green, $color-blue, $color-blue);
+    }
+
+    img {
+        &.float-right, &.alignright {
+            margin: {
+                left: 1em;
+                bottom: 1em;
+            }
+        }
+
+        &.float-left, &.alignleft {
+            margin: {
+                right: 1em;
+                bottom: 1em;
+            }
+        }
+
+        &.aligncenter {
+            display: block;
+        }
+    }
+
+    strong {
+
+    }
+
+    blockquote {
+
+    }
+
+    form {
+        // @import 'forms';
+    }
+
+    table {
+
+    }
+
+    #breadcrumbs {
+        font: {
+            size: .8em;
+        }
+    }
+
+    &#page, &#post, &#none {
+
+    }
+
+    &#archive, &#search {
+
+    }
+}
