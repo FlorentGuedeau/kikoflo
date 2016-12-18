@@ -11,6 +11,9 @@ Outils utiles pour commencer un nouveau projet web avec Grunt (Node.js) :
     nodevars 
     grunt
     
+    
+Ou utiliser directement le fichier batch `kikogo.bat` 
+    
 
 Pour vérifier si les node_modules sont à jour : https://www.npmjs.com/package/npm-check/
 
@@ -27,4 +30,4 @@ Pour vérifier si les node_modules sont à jour : https://www.npmjs.com/package/
 ## A faire
 - [ ] Une page html type : headings, liste, citation, tableau, formulaire, etc.
 - [ ] Mettre en place un réseau local pour le LiveReload
-- [ ] Une installation automatique
+- [x] Une installation et un lancement automatique => kikogo.bat
