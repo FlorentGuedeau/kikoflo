@@ -3,7 +3,7 @@ module.exports = function(grunt) {
         watch: {
             sass: {
                 files: ['sass/**/*.{scss,sass}'],
-                tasks: ['sass:dist', 'csscomb:dist', 'postcss:dist']
+                tasks: ['sass:dist', 'postcss:dist', 'csscomb:dist']
             },
             livereload: {
                 files: ['html/*.html', 'html/*.php', 'html/javascripts/**/*.{js,json}', 'html/stylesheets/*.css','html/images/**/*.{png,jpg,jpeg,gif}'],
@@ -53,7 +53,7 @@ module.exports = function(grunt) {
         csscomb: {
             dist: {
                 files: {
-                    'html/stylesheets/main.css': ['html/stylesheets/main.css']
+                    'html/stylesheets/resorted-main.css': ['html/stylesheets/main.css']
                 }
             }
         },
@@ -64,5 +64,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-postcss'); // https://github.com/postcss/autoprefixer
     grunt.loadNpmTasks('grunt-contrib-imagemin'); // https://github.com/gruntjs/grunt-contrib-imagemin
     grunt.loadNpmTasks('grunt-contrib-watch'); // https://github.com/gruntjs/grunt-contrib-watch /// http://blog.grayghostvisuals.com/grunt/image-optimization/
-    grunt.registerTask('default', ['sass:dist', 'csscomb:dist', 'postcss:dist', 'imagemin', 'watch']);
+    grunt.registerTask('default', ['sass:dist', 'postcss:dist', 'csscomb:dist', 'imagemin', 'watch']);
 };
