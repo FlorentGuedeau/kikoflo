@@ -1,11 +1,11 @@
 $height-input: 38px;
 $height-outline: 4px;
 
-input[type="submit"], input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="number"], input[type="search"], input[type="url"], input[type="date"], textarea, select {
+[type="submit"], [type="text"], [type="email"], [type="password"], [type="tel"], [type="number"], [type="search"], [type="url"], [type="date"], textarea, select {
     @include inline-block;
 }
 
-input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="number"], input[type="search"], input[type="url"], input[type="date"], textarea, select {
+[type="text"], [type="email"], [type="password"], [type="tel"], [type="number"], [type="search"], [type="url"], [type="date"], textarea, select {
     background: {
         color: #fbfbfb;
     }
@@ -58,39 +58,37 @@ textarea {
     }
 }
 
-input {
-    &[type="submit"] {
-        border: none;
-        padding: {
-            right: 20px;
-            left: 20px;
-        }
-        line-height: $height-input;
+[type="submit"] {
+    border: none;
+    padding: {
+        right: 20px;
+        left: 20px;
+    }
+    line-height: $height-input;
+    background: {
+        color: $color-blue;
+    }
+    font: {
+        family: $family-miso;
+        size: em(30);
+    }
+    color: $color-sub;
+    text: {
+        transform: uppercase;
+    }
+
+    &:hover {
         background: {
-            color: $color-blue;
-        }
-        font: {
-            family: $family-miso;
-            size: em(30);
+            color: $color-light-blue;
         }
         color: $color-sub;
-        text: {
-            transform: uppercase;
-        }
+    }
 
-        &:hover {
-            background: {
-                color: $color-light-blue;
-            }
-            color: $color-sub;
+    &:active {
+        background: {
+            color: #000000
         }
-
-        &:active {
-            background: {
-                color: #000000
-            }
-            color: $color-sub;
-        }
+        color: $color-sub;
     }
 }
 

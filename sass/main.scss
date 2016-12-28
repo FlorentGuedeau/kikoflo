@@ -19,11 +19,8 @@ $_normalize-exclude: ('table');
 @import "font-awesome/font-awesome";
 //@import "mixins";
 
-//@import "toolkit";
-//@import "toolkit/kickstart";
 
 /* Dimensions */
-$sidebar-width: 260px;
 $footer-height : 250px;
 
 /* Couleurs du projet */
@@ -31,7 +28,6 @@ $color-text: #000000;
 
 /* Autres variables */
 $golden-ratio: 1.62;
-$font-global: 16;
 
 $slicer-breakpoints: 0 1000px;
 $slicer-breakpoint-names: 'mobile' 'desktop';
@@ -41,28 +37,27 @@ $slicer-breakpoint-names: 'mobile' 'desktop';
 // @include at : a
 
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     height: 100%;
-    font: {
-        size: 100%; // eviter de forcer la taille de police pour les navigateurs
-    }
+    font-size: calc(1em * .625);
 }
 
 body {
     height: 100%;
     font: {
         family: $family-lato;
-        size: 1em;
+        size: 1.6rem;
     }
     color: $color-text;
 
-    #wrapper {
+    [id="wrapper"] {
         > noscript {
             > div {
-                margin: {
-                    left: 1em;
-                    right: 1em;
-                }   
+                margin: 0 1em;   
             }
         }
 

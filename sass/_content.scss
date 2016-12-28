@@ -24,7 +24,7 @@ main {
     }
 
     p, li {
-        line-height: #{$golden-ratio}em;
+        line-height: $golden-ratio;
     }
 
     a {
@@ -67,17 +67,17 @@ main {
 
     }
 
-    #breadcrumbs {
+    [id="breadcrumbs"] {
         font: {
             size: .8em;
         }
     }
 
-    &#page, &#post, &#none {
+    &[id="page"], &[id="post"], &[id="none"] {
 
     }
 
-    &#archive, &#search {
+    &[id="archive"], &[id="search"] {
 
     }
 }
