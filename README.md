@@ -4,7 +4,7 @@ Outils utiles pour commencer un nouveau projet web avec Grunt (Node.js) :
 * Auto prefixer : https://github.com/postcss/autoprefixer
 * Minifier de CSS :  https://github.com/gruntjs/grunt-contrib-cssmin
 * Minifier d'images : https://github.com/gruntjs/grunt-contrib-imagemin
-* Réordination automatique des déclarations CSS // https://github.com/csscomb/grunt-csscomb
+* Réordination automatique des déclarations CSS : https://github.com/csscomb/grunt-csscomb
 * Auto compilation : https://github.com/gruntjs/grunt-contrib-watch
 
 
