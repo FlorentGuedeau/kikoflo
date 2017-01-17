@@ -2,6 +2,11 @@
 
 echo Bienvenue dans kikoflo !
 
-REM npm update = installation ou màj des node_modules, nodevars = initialisation de l'environnement, grunt = lancement de la compilation et du watch
+REM Initialisation de l'environnement
+CALL nodevars
 
-npm update & nodevars & grunt
+REM Installation ou màj des node_modules
+CALL npm update
+
+REM Lancement de la compilation et du watch
+CALL grunt
