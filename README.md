@@ -5,6 +5,7 @@ Outils utiles pour commencer un nouveau projet web avec Grunt (Node.js) :
 * Minifier de CSS :  https://github.com/gruntjs/grunt-contrib-cssmin
 * Minifier d'images : https://github.com/gruntjs/grunt-contrib-imagemin
 * Réordination automatique des déclarations CSS : https://github.com/csscomb/grunt-csscomb
+* Conversion des REM en PX : https://github.com/lohmander/grunt-rem-to-px
 * Auto compilation : https://github.com/gruntjs/grunt-contrib-watch
 
 
