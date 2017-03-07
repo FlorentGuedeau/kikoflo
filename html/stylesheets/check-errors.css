@@ -1,0 +1,82 @@
+/*Style en ligne*/
+*[style] {
+    border: 5px solid red;
+}
+
+
+/*Target manquant sur les liens*/
+a:not([href])
+a:[href="#"],
+a:[href=""],
+a[href*="javascript:void(0)"] {
+    border: 5px solid red;
+}
+
+
+/*Image inaccessible = sans alt*/
+img:not([alt]) {
+    border: 5px solid red;
+}
+
+
+/*Attribut langue*/
+html:not([lang]),
+html[lang=""] {
+    border: 5px solid red;
+}
+
+
+/*Mauvais charset*/
+meta[charset]:not([charset="UTF-8"]) {
+    border: 5px solid red;
+}
+
+
+/*Le charset n'est pas en premier dans le document*/
+meta[charset="UTF-8"]:not(:first-child) {
+    border: 5px solid red;
+}
+
+
+/*Attribut viewport inaccessible*/
+meta[name="viewport"][content*="user-scalable=no"],
+meta[name="viewport"][content*="maximum-scale"],
+meta[name="viewport"][content*="minimum-scale"] {
+    border: 5px solid red;
+}
+
+
+/*Elements de form sans label*/
+input:not([id]),
+select:not([id]),
+textarea:not([id]) {
+    border: 5px solid red;
+}
+
+label:not([for]) {
+    border: 5px solid red;
+}
+
+input:not([name]),
+select:not([name]),
+textarea:not([name]) {
+    border: 5px solid red;
+}
+
+form:not([name]):not([id]) {
+    border: 5px solid red;
+}
+
+
+/*Element interactif vide*/
+button:empty,
+a:empty {
+    border: 5px solid red;
+}
+
+
+/*Attribut deprecated*/
+script[type="text/javascript"],
+link[rel="stylesheet"][type="text/css"] {
+    border: 5px solid red;
+}
