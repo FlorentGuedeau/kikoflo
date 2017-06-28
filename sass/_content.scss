@@ -24,10 +24,10 @@ main {
     }
 
     p, li {
-        line-height: $golden-ratio;
+        line-height: 1.6;
     }
 
-    a {
+    a:not(.btn) {
         // @include link-colors($color-blue, $color-orange, $color-green, $color-blue, $color-blue);
     }
 
