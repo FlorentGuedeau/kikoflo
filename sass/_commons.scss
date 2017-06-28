@@ -1,10 +1,10 @@
 /* CLASSES DE BASE */
 a, li, i, input, textarea, button {
-    @include transition-duration(400ms);
+    @include transition-duration(.4s);
 }
 
 a:active, li:active, i:active, input:active, button:active {
-    @include transition-duration(0ms);
+    @include transition-duration(0s);
 }
 
 .float-left, .alignleft {
@@ -20,6 +20,10 @@ a:active, li:active, i:active, input:active, button:active {
         left: auto;
         right: auto;
     }
+}
+
+.txt-center {
+    text-align: center;
 }
 
 .wp-caption {
@@ -79,7 +83,7 @@ a:active, li:active, i:active, input:active, button:active {
     font: {
         size: 1em;
     }
-    line-height: #{$golden-ratio}em;
+    line-height: 1.6;
     display: none;
 
     &.info {
@@ -128,4 +132,28 @@ img {
 iframe {
     border: 0;
     max-width: 100%;
+}
+
+.btn {
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+
+    &:hover {
+
+    }
+
+    &:active, &.active {
+
+    }
+}
+
+@include from('tablet') {
+    a {
+        &[href^="tel:"] {
+            text-decoration: none;
+            cursor: default;
+        }
+    }
 }
