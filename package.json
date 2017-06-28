@@ -12,7 +12,8 @@
         "grunt-postcss": "^0.8.0",
         "grunt-contrib-imagemin": "^1.0.1",
         "grunt-csscomb": "^3.1.1",
-        "grunt-contrib-cssmin": "^1.0.2"
+        "grunt-contrib-cssmin": "^1.0.2",
+        "grunt-rem-to-pixels": "^0.2.0"
     },
     "dependencies": {
         "normalize-scss": "^6.0.0"
