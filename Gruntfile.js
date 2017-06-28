@@ -5,25 +5,16 @@ module.exports = function(grunt) {
                 files: ['sass/**/*.{scss,sass}'],
                 tasks: ['sass:dist', 'postcss:dist']
             },
-            //livereload: {
-            //    files: ['html/*.html', 'html/*.php', 'html/javascripts/**/*.{js,json}', 'html/stylesheets/*.css','html/images/**/*.{png,jpg,jpeg,gif}'],
-            //    options: {
-            //        livereload: true,
-            //        livereload: {
-            //            host: 'localhost',
-            //            port: 17700,
-            //        }
-            //    }
-            //}
         },
         sass: {                              // Task
             dist: {                            // Target
                 options: {                       // Target options
-                    //style: 'compressed',
+                    style: 'compressed',
                     compass: true
                 },
                 files: {                         // Dictionary of files
                     'html/stylesheets/main.css': 'sass/main.scss',       // 'destination': 'source',
+                    //                    'html/stylesheets/landing.css': 'sass/landing.scss',       // 'destination': 'source',
                 }
             }
         },
@@ -37,7 +28,6 @@ module.exports = function(grunt) {
                 ]
             },
             dist: {
-                //src: 'html/stylesheets/*.css',
                 src: 'html/stylesheets/main.css'
             }
         },
@@ -68,6 +58,16 @@ module.exports = function(grunt) {
                 }
             }
         },
+        rem_to_px: {
+            options: {
+                baseFontSize: 10, // 1rem = 10px
+                removeFontFace: true,
+            },
+            dist: {
+                src: ['html/stylesheets/main.css'],
+                dest: 'html/stylesheets/ie/'
+            }
+        },
     });
 
     grunt.loadNpmTasks('grunt-contrib-cssmin'); // https://github.com/gruntjs/grunt-contrib-cssmin
@@ -76,5 +76,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-postcss'); // https://github.com/postcss/autoprefixer
     grunt.loadNpmTasks('grunt-contrib-imagemin'); // https://github.com/gruntjs/grunt-contrib-imagemin
     grunt.loadNpmTasks('grunt-contrib-watch'); // https://github.com/gruntjs/grunt-contrib-watch /// http://blog.grayghostvisuals.com/grunt/image-optimization/
-    grunt.registerTask('default', ['sass:dist', 'postcss:dist', 'csscomb:dist', 'cssmin', 'imagemin', 'watch']);
+    grunt.loadNpmTasks('grunt-rem-to-pixels'); // https://github.com/lohmander/grunt-rem-to-px
+
+    grunt.registerTask('default', ['sass:dist', 'postcss:dist', 'csscomb:dist', 'cssmin', 'rem_to_px', 'imagemin', 'watch']);
+    //    grunt.registerTask('default', ['sass:dist', 'postcss:dist', 'rem_to_px', 'watch']);
 };
