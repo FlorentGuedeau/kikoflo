@@ -21,16 +21,13 @@ $_normalize-exclude: ('table');
 
 
 /* Dimensions */
-$footer-height : 250px;
+$max-width: 1200px;
 
 /* Couleurs du projet */
 $color-text: #000000;
 
-/* Autres variables */
-$golden-ratio: 1.62;
-
-$slicer-breakpoints: 0 1000px;
-$slicer-breakpoint-names: 'mobile' 'desktop';
+$slicer-breakpoints: 0 768px 1024px $max-width;
+$slicer-breakpoint-names: 'mobile' 'tablet' 'desktop';
 
 // @include to : jusqu'a
 // @include from : à partir de ___ et au dela
@@ -54,18 +51,14 @@ body {
     }
     color: $color-text;
 
-    [id="wrapper"] {
-        > noscript {
-            > div {
-                margin: 0 1em;   
-            }
+    noscript {
+        div {
+            margin: 0 1em;   
         }
-
-        @import "header";
-        @import "content";
     }
 
-    @import "footer";
-
     @import "commons";
+    @import "header";
+    @import "content";
+    @import "footer";
 }
