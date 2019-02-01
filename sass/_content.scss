@@ -1,29 +1,39 @@
 main {
-    h1 {
+    #{headings(all)} {
+
+    }
+    
+    h1, .h1 {
         a {
 
         }
     }
 
-    h2 {
+    h2, .h2 {
         a {
 
         }
     }
 
-    h3 {
+    h3, .h3 {
         a {
 
         }
     }
 
-    h4 {
+    h4, .h4 {
+        a {
+
+        }
+    }
+    
+    h5, .h5 {
         a {
 
         }
     }
 
-    p, li {
+    p, li, blockquote, td, th {
         line-height: 1.6;
     }
 
@@ -34,15 +44,15 @@ main {
     img {
         &.float-right, &.alignright {
             margin: {
-                left: 1em;
-                bottom: 1em;
+                left: 2rem;
+                bottom: 2rem;
             }
         }
 
         &.float-left, &.alignleft {
             margin: {
-                right: 1em;
-                bottom: 1em;
+                right: 2rem;
+                bottom: 2rem;
             }
         }
 
@@ -56,15 +66,43 @@ main {
     }
 
     blockquote {
+        p {
+            &:first-child {
+                margin-top: 0;
+            }
 
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
 
     form {
         // @import 'forms';
+        
+        &.wpcf7-form {
+            br {
+                display: none;
+            }
+        }
     }
 
     table {
+        thead {
+            tr {
+                th, td {
+                    
+                }
+            }
+        }
 
+        tbody {
+            tr {
+                td {
+                    
+                }   
+            }
+        }
     }
 
     [id="breadcrumbs"] {
