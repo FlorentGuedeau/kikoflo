@@ -61,4 +61,8 @@ body {
     @import "header";
     @import "content";
     @import "footer";
+    
+    &.home {
+        @import "home";
+    }
 }
