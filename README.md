@@ -33,3 +33,10 @@ Pour vérifier si les node_modules sont à jour : https://www.npmjs.com/package/
 - [ ] Une page html type : headings, liste, citation, tableau, formulaire, etc.
 - [ ] Mettre en place un réseau local pour le LiveReload
 - [x] Une installation et un lancement automatique => kikogo.bat
+
+
+## ATTENTION, pour fonctionner il faut les versions suivantes de :
+* SASS : 3.4.25
+* Compass : 1.0.3
+
+gem install sass -v 3.4.25
