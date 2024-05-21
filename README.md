@@ -28,6 +28,8 @@ Pour vérifier si les node_modules sont à jour : https://www.npmjs.com/package/
 * breakpoint : https://github.com/lolmaus/breakpoint-slicer
 * _[option]_ toolkit : https://github.com/at-import/toolkit
 
+* gem install normalize-scss breakpoint breakpoint-slicer
+
 
 ## A faire
 - [ ] Une page html type : headings, liste, citation, tableau, formulaire, etc.
